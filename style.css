@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#appContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+}
+
+#mainDuck {
+  width: 245px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  right: 50px;
+  transition: 0.2s;
+}
+
+.duckyRainContainer {
+  position: absolute;
+  height: 100vh;
+  /* overflow: hidden; */
+  z-index: 0;
+  visibility: hidden;
+}
+
+.duckyRainElement {
+  position: absolute;
+  top: -50px; /* Start above the viewport */
+  animation: rain 10s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.duckyRainElement:nth-child(1) { left: 10%; animation-delay: 0s; }
+.duckyRainElement:nth-child(2) { left: 30%; animation-delay: 0.5s; }
+.duckyRainElement:nth-child(3) { left: 50%; animation-delay: 1s; }
+.duckyRainElement:nth-child(4) { left: 70%; animation-delay: 1.5s; }
+
+.ducky {
+  width: 50px;
+}
+
+#mainDuck:hover {
+  transform: scale(1.05);
+}
+
+#mainDuck.duck-clicked:hover {
+  transform: scale(0.9);
+}
+
+.duck-clicked {
+  transform: scale(0.99);
+  transition: 0.2s;
+}
+
+.main-duck {
+  width: 350px;
+  cursor: pointer;
+  
+  /* animation: rotate 30s linear infinite; */
+}
+
+.click-section {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.buildings-section {
+  background-color: aquamarine;
+}
+.upgrades-section {
+  background-color: cadetblue;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  from {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}

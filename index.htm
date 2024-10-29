@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="appContainer">
+        <section class="click-section">
+          <div id="mainDuck">
+            <img class="main-duck" src="pato.gif" alt="Duck to click" />
+          </div>
+          <div id="currentDucksContainer"></div>
+          <div id="ducksPerSecondContainer"></div>
+          <button id="debugClickButton">Click</button>
+          <div class="duckyRainContainer" id="ducky">
+            <div class="duckyRainElement">
+              <img class="ducky" src="ducky.png" alt="Raining ducks" />
+            </div>
+            <div class="duckyRainElement">
+              <img class="ducky" src="ducky.png" alt="Raining ducks" />
+            </div>
+            <div class="duckyRainElement">
+              <img class="ducky" src="ducky.png" alt="Raining ducks" />
+            </div>
+            <div class="duckyRainElement">
+              <img class="ducky" src="ducky.png" alt="Raining ducks" />
+            </div>
+            <div class="duckyRainElement">
+              <img class="ducky" src="ducky.png" alt="Raining ducks" />
+            </div>
+            <div class="duckyRainElement">
+              <img class="ducky" src="ducky.png" alt="Raining ducks" />
+            </div>
+          </div>
+        </section>
+        <section class="buildings-section">
+          <h1>Buildings Section</h1>
+          <div id="buildingsContainer">
+            <div id="cursorsBuildingContainer"></div>
+            <div id="grandpasBuildingContainer"></div>
+            <div id="farmsBuildingContainer"></div>
+          </div>
+        </section>
+        <section class="upgrades-section">
+          <h1>Upgrades Section</h1>
+          <div id="shopContainer">
+            <h2>Shop</h2>
+            <div>
+              <button id="buyMouseUpgradeButton">Buy mouse upgrade</button>
+              <p id="mouseUpgradePriceElement"></p>
+            </div>
+          </div>
+          <div id="buildingsContainer">
+            <h2>Buildings</h2>
+            <div>
+              <button id="buyCursorButton">Buy cursor</button>
+              <p id="cursorPriceElement"></p>
+            </div>
+            <div>
+              <button id="buyGrandpaButton">Buy grandpa</button>
+              <p id="grandpaPriceElement"></p>
+            </div>
+            <div>
+              <button id="buyFarmButton">Buy farm</button>
+              <p id="farmPriceElement"></p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
